@@ -15,7 +15,13 @@ class GroupSerializers(serializers.HyperlinkedModelSerializer):
         fields: list = ['url', 'name']
 
 
-class AccountSerializers(serializers.HyperlinkedModelSerializer):
+class AccountsSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model: Accounts = Accounts
         fields: list = ['rank', 'account_name', 'brand_account', 'followers']
+
+
+class AccountSerializers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model: Accounts = Accounts
+        fields = "__all__"
